@@ -3,12 +3,10 @@ package util
 import "github.com/spf13/viper"
 
 type ConfigStruct struct {
-	HueBridgeIp        string `mapstructure:"HUE_BRIDGE_IP"`
-	HueUsername        string `mapstructure:"HUE_USERNAME"`
-	HueLightNumber     string `mapstructure:"HUE_LIGHT_NUMBER"`
-	ColorCycleInterval int    `mapstructure:"COLOR_CYCLE_INTERVAL"`
-	ColorBrightness    int    `mapstructure:"COLOR_BRI"`
-	ColorSaturation    int    `mapstructure:"COLOR_SAT"`
+	Port     string `mapstructure:"PORT"`
+	PinRed   int    `mapstructure:"PIN_RED"`
+	PinGreen int    `mapstructure:"PIN_GREEN"`
+	TestMode bool   `mapstructure:"TEST_MODE"`
 }
 
 var Config ConfigStruct
