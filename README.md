@@ -24,7 +24,8 @@ Now restart your Pi with the command `sudo reboot`.
 Client
 ------
 
-To run the client on your Mac, copy the contents of `bin/macos/` to your user directory or anywhere you wish. Edit the `app.env` file to set the correct IP address of the Raspberry Pi Zero W (you can use a hostname instead if you want). Then set the app to run at startup by going to `System Preferences > Users and Groups > Login Items` and adding the `client` executable to the list of applications to launch at login. You probably want to check the box under "Hide" unless you want to see a terminal window with the output whenever you log in (although that's useful for debugging!).
+To install the client on your Mac, `cd` into the `macos/src` directory. Edit the `app.env` file to set the correct IP address of the Raspberry Pi Zero W (you can use a hostname instead if you want). Then run `./install.sh` which will build the client, copy it to a subdirectory of your home directory, and then install it as a launchd service so it runs when you log in.
+
 
 Todo Items
 -----------
