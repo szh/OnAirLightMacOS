@@ -10,4 +10,4 @@ cp "launch.plist" "$PLIST_TARGET"
 sed -i "" "s/_username_/$USER/" "$PLIST_TARGET"
 launchctl unload "$PLIST_TARGET"
 launchctl load "$PLIST_TARGET"
-launchctl start onairlight.loginscript
+launchctl start szh/OnAirLightMacOs
