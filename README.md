@@ -26,6 +26,17 @@ Client
 
 To install the client on your Mac, `cd` into the `macos/src` directory. Edit the `app.env` file to set the correct IP address of the Raspberry Pi Zero W (you can use a hostname instead if you want). Then run `./install.sh` which will build the client, copy it to a subdirectory of your home directory, and then install it as a launchd service so it runs when you log in.
 
+Troubleshooting
+---------------
+
+To test the connection from your Mac to the Pi, you can manually query the Pi's HTTP server, replacing the IP and port:
+
+```bash
+# Turn on busy light
+curl -X PUT -d "true" http://192.168.86.56:8080/setstate
+# Turn off busy light
+curl -X PUT -d "false" http://192.168.86.56:8080/setstate
+```
 
 Todo Items
 -----------
