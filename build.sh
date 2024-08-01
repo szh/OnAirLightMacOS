@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -ex
+
 cd "./macos/src" || exit
 ./build.sh
 
