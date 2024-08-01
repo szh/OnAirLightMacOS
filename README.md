@@ -42,4 +42,4 @@ Todo Items
 -----------
 
 - Add a timeout after which point the server resets the status if it hasn't received a request.
-- Support GET /state to get the current state of the light
+- Build using GitHub Actions.

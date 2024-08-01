@@ -26,6 +26,10 @@ func Start() {
 		light.SetState(value)
 	})
 
+	http.HandleFunc("/getstate", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte(strconv.FormatBool(light.GetState())))
+	})
+
 	log.Fatal(http.ListenAndServe(":"+util.Config.Port, nil))
 }
 

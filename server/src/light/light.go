@@ -17,6 +17,7 @@ func (RGBStruct) AllPins() []rpio.Pin {
 }
 
 var RGBLight RGBStruct
+var _state bool
 
 func SetupRGB() {
 	if util.Config.TestMode {
@@ -52,6 +53,11 @@ func SetState(busy bool) {
 		RGBLight.PinRed.Low()
 		RGBLight.PinGreen.High()
 	}
+	_state = busy
+}
+
+func GetState() bool {
+	return _state
 }
 
 func Close() {
