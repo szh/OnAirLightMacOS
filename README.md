@@ -11,7 +11,13 @@ Run `./build.sh` to compile both parts - the client which runs on Mac OS, and th
 Server
 ------
 
-To install the server on your Raspberry Pi Zero W, SSH or SCP into your Pi and copy the files in `bin/server/` to `/home/pi/` or some other directory. Then edit your `/etc/rc.local` file to run the server at boot, by adding this line before `exit 0`:
+To install the server on your Raspberry Pi Zero W, SSH or SCP into your Pi and copy the files in `bin/server/` to `/home/pi/` or some other directory.
+
+```bash
+scp bin/server/* pi@onairserver.local:/home/pi
+```
+
+Then edit your `/etc/rc.local` file to run the server at boot, by adding this line before `exit 0`:
 
 ```bash
 (cd /home/pi; sudo ./server > server.log &)
